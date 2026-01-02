@@ -8,7 +8,6 @@ body{
     padding:0;
     font-family:Arial, Helvetica, sans-serif;
     background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
-    color:white;
 }
 .container{
     width:100%;
@@ -19,25 +18,31 @@ body{
 }
 .box{
     background:white;
-    color:#333;
-    width:500px;
+    width:520px;
     padding:40px;
     border-radius:16px;
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
-.box h1{
-    margin-bottom:10px;
+h1{
     color:#1e293b;
 }
-.box p{
-    font-size:15px;
-    margin-bottom:30px;
+p{
     color:#555;
+    font-size:14px;
+}
+.notice{
+    background:#f1f5f9;
+    border-left:5px solid #1e293b;
+    padding:12px;
+    margin:20px 0;
+    text-align:left;
+    font-size:13px;
+    color:#333;
 }
 .btn{
     display:inline-block;
-    width:180px;
+    width:200px;
     padding:12px;
     margin:10px;
     background:#1e293b;
@@ -49,9 +54,20 @@ body{
 .btn:hover{
     background:#334155;
 }
-.footer{
-    margin-top:30px;
+.admin{
+    margin-top:25px;
     font-size:13px;
+}
+.admin a{
+    color:#64748b;
+    text-decoration:none;
+}
+.admin a:hover{
+    text-decoration:underline;
+}
+.footer{
+    margin-top:25px;
+    font-size:12px;
     color:#777;
 }
 </style>
@@ -60,19 +76,33 @@ body{
 
 <div class="container">
     <div class="box">
+
         <h1>Online Exam Portal</h1>
         <p>
-            Welcome to the Online Examination System.  
-            Register as a student, get admin approval,  
-            and appear for your course exam securely.
+            Secure online examination system for students.  
+            Register, get approved, and appear for your exam.
         </p>
+
+        <div class="notice">
+            <b>Exam Instructions:</b><br>
+            • Registration requires admin approval<br>
+            • Exam is course-based<br>
+            • No re-exam without permission<br>
+            • Results are auto-generated
+        </div>
 
         <a class="btn" href="login.php">Login</a>
         <a class="btn" href="std_reg.php">Student Registration</a>
 
+        <!-- Hidden Admin Access -->
+        <div class="admin">
+            <a href="login.php">Admin Login</a>
+        </div>
+
         <div class="footer">
             © <?php echo date("Y"); ?> Exam Portal | All Rights Reserved
         </div>
+
     </div>
 </div>
 
